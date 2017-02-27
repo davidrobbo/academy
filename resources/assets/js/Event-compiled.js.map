@@ -1,0 +1,1 @@
+{"version":3,"sources":["Event.js"],"names":[],"mappings":";;;;;;AAAA;;;;;;AAEA,IAAM,QAAQ,mBAAd;;kBAEe,K","file":"Event-compiled.js","sourcesContent":["import Vue from 'vue';\r\n\r\nconst event = new Vue();\r\n\r\nexport default event;"]}
