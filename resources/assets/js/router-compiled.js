@@ -62,7 +62,7 @@ var router = new _vueRouter2.default({
             component: _AdminPlayerCreate2.default,
             name: 'createPlayer'
         }, {
-            path: "edit",
+            path: ":id/edit",
             component: _AdminPlayerEdit2.default,
             name: 'editPlayer'
         }]

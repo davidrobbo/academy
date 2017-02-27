@@ -7,11 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset("css/bootstrap.min.css") }}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset("css/vendor/icon-sets.css") }}">
     <link rel="stylesheet" href="{{ asset("css/main.min.css") }}">
     <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
     <link rel="stylesheet" href="{{ asset("css/demo.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/animate.css") }}">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
@@ -34,7 +36,9 @@
             <div class="main-content">
                 <div class="container-fluid">
                     <!-- OVERVIEW -->
-                    <router-view></router-view>
+                    <transition name="fade" mode="out-in">
+                        <router-view></router-view>
+                    </transition>
                 </div>
             </div>
             <!-- END MAIN CONTENT -->
@@ -50,8 +54,10 @@
 </div>
 <!-- END WRAPPER -->
 <!-- Javascript -->
-<script src="{{ asset("js/jquery/jquery-2.1.0.min.js") }}"></script>
-<script src="{{ asset("js/bootstrap/bootstrap.min.js") }}"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="{{ asset("js/plugins/jquery-slimscroll/jquery.slimscroll.min.js") }}"></script>
 <script src="{{ asset("js/plugins/jquery-easypiechart/jquery.easypiechart.min.js") }}"></script>
 <script src="{{ asset("js/plugins/chartist/chartist.min.js") }}"></script>

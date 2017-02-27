@@ -30,7 +30,7 @@ const router = new VueRouter({
                     name: 'createPlayer'
                 },
                 {
-                    path: "edit",
+                    path: ":id/edit",
                     component: editplayer,
                     name: 'editPlayer'
                 }

@@ -13552,6 +13552,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = {
@@ -13594,6 +13596,53 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = {
@@ -13604,8 +13653,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             user: {
-                id: null
-            }
+                id: null,
+                firstname: "",
+                surname: "",
+                email: "",
+                position: ['a']
+            },
+            listDesc: false
         };
     },
 
@@ -13614,7 +13668,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return !this.user.id;
         }
     },
-    methods: {},
+    methods: {
+        save: function save() {
+            return;
+        }
+    },
     mounted: function mounted() {},
     created: function created() {}
 };
@@ -13628,6 +13686,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PlayerFilter_vue__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PlayerFilter_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__PlayerFilter_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Event_js__ = __webpack_require__(11);
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -13695,6 +13759,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         fullName: function fullName(u) {
             return u.firstname + " " + u.surname;
+        },
+        delete: function _delete(user) {},
+        loginAs: function loginAs(user) {},
+        getEditFormFor: function getEditFormFor(user) {
+            this.$router.push({ name: 'editPlayer', params: { id: user.id } });
         }
     },
     mounted: function mounted() {},
@@ -13707,6 +13776,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -14077,7 +14148,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router___default.a({
             component: __WEBPACK_IMPORTED_MODULE_4__components_Admin_Players_AdminPlayerCreate_vue___default.a,
             name: 'createPlayer'
         }, {
-            path: "edit",
+            path: ":id/edit",
             component: __WEBPACK_IMPORTED_MODULE_5__components_Admin_Players_AdminPlayerEdit_vue___default.a,
             name: 'editPlayer'
         }]
@@ -14127,7 +14198,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -14155,7 +14226,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -14169,7 +14240,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -14239,7 +14310,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -14310,7 +14381,7 @@ module.exports = "/images/ring.gif?83ce53a1466dfc526a11ea020d94272d";
 /* 66 */
 /***/ (function(module, exports) {
 
-module.exports = "/images/logo.png?9a024d280487b78db7ea1cf5dda6dfb3";
+module.exports = "/images/logo.png?9d1191f0173c26de661bee51800b7400";
 
 /***/ }),
 /* 67 */
@@ -32028,16 +32099,49 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.listDesc = !_vm.listDesc
       }
     }
-  })]), _vm._v(" "), (_vm.listDesc) ? _c('p', {
+  })]), _vm._v(" "), _c('transition', {
+    attrs: {
+      "name": "fade"
+    }
+  }, [(_vm.listDesc) ? _c('p', {
     staticClass: "panel-subtitle"
-  }, [_vm._v("\n            Below is a list of all players registered. You can change the display and filter through the players\n            with the filter system. Alongside the players details are buttons for editing and deleting players.\n        ")]) : _vm._e()]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\n                Below is a list of all players registered. You can change the display and filter through the players\n                with the filter system. Alongside the players details are buttons for editing and deleting players.\n            ")]) : _vm._e()])], 1), _vm._v(" "), _c('div', {
     staticClass: "panel-body"
   }, [_c('playerfilter'), _vm._v(" "), _c('div', {
     staticClass: "table-responsive"
   }, [_c('table', {
     staticClass: "table table-hover"
-  }, [_c('thead', [_c('tr', [(_vm.showOptions.id) ? _c('th', [_vm._v("ID")]) : _vm._e(), _vm._v(" "), (_vm.showOptions.fullname) ? _c('th', [_vm._v("Name")]) : _vm._e(), _vm._v(" "), (_vm.showOptions.firstname) ? _c('th', [_vm._v("Firstname")]) : _vm._e(), _vm._v(" "), (_vm.showOptions.surname) ? _c('th', [_vm._v("Surname")]) : _vm._e(), _vm._v(" "), (_vm.showOptions.email) ? _c('th', [_vm._v("Email")]) : _vm._e(), _vm._v(" "), _c('th')])]), _vm._v(" "), _c('tbody', _vm._l((_vm.users), function(user, index) {
-    return _c('tr', [(_vm.showOptions.id) ? _c('td', [_vm._v(_vm._s(user.id))]) : _vm._e(), _vm._v(" "), (_vm.showOptions.fullname) ? _c('td', [_vm._v(_vm._s(_vm.fullName(user)))]) : _vm._e(), _vm._v(" "), (_vm.showOptions.firstname) ? _c('td', [_vm._v(_vm._s(user.firstname))]) : _vm._e(), _vm._v(" "), (_vm.showOptions.surname) ? _c('td', [_vm._v(_vm._s(user.surname))]) : _vm._e(), _vm._v(" "), (_vm.showOptions.email) ? _c('td', [_vm._v(_vm._s(user.email))]) : _vm._e(), _vm._v(" "), _c('td')])
+  }, [_c('thead', [_c('tr', [(_vm.showOptions.id) ? _c('th', [_vm._v("ID")]) : _vm._e(), _vm._v(" "), (_vm.showOptions.fullname) ? _c('th', [_vm._v("Name")]) : _vm._e(), _vm._v(" "), (_vm.showOptions.firstname) ? _c('th', [_vm._v("Firstname")]) : _vm._e(), _vm._v(" "), (_vm.showOptions.surname) ? _c('th', [_vm._v("Surname")]) : _vm._e(), _vm._v(" "), (_vm.showOptions.email) ? _c('th', [_vm._v("Email")]) : _vm._e(), _vm._v(" "), _c('th', {
+    staticClass: "text-right"
+  }, [_vm._v("Actions")])])]), _vm._v(" "), _c('tbody', _vm._l((_vm.users), function(user, index) {
+    return _c('tr', [(_vm.showOptions.id) ? _c('td', [_vm._v(_vm._s(user.id))]) : _vm._e(), _vm._v(" "), (_vm.showOptions.fullname) ? _c('td', [_vm._v(_vm._s(_vm.fullName(user)))]) : _vm._e(), _vm._v(" "), (_vm.showOptions.firstname) ? _c('td', [_vm._v(_vm._s(user.firstname))]) : _vm._e(), _vm._v(" "), (_vm.showOptions.surname) ? _c('td', [_vm._v(_vm._s(user.surname))]) : _vm._e(), _vm._v(" "), (_vm.showOptions.email) ? _c('td', [_vm._v(_vm._s(user.email))]) : _vm._e(), _vm._v(" "), _c('td', {
+      staticClass: "text-right"
+    }, [_c('div', {
+      staticClass: "btn btn-primary",
+      on: {
+        "click": function($event) {
+          _vm.getEditFormFor(user)
+        }
+      }
+    }, [_vm._v("Edit")]), _vm._v(" "), _c('div', {
+      staticClass: "btn btn-default",
+      on: {
+        "click": function($event) {
+          _vm.loginAs(user)
+        }
+      }
+    }, [_c('i', {
+      staticClass: "fa fa-user-circle-o"
+    })]), _vm._v(" "), _c('div', {
+      staticClass: "btn btn-danger",
+      on: {
+        "click": function($event) {
+          delete(user)
+        }
+      }
+    }, [_c('i', {
+      staticClass: "fa fa-times"
+    })])])])
   }))])])], 1)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -32081,9 +32185,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.listDesc = !_vm.listDesc
       }
     }
-  })]), _vm._v(" "), (_vm.listDesc) ? _c('p', {
+  })]), _vm._v(" "), _c('transition', {
+    attrs: {
+      "name": "fade"
+    }
+  }, [(_vm.listDesc) ? _c('p', {
     staticClass: "panel-subtitle"
-  }, [_vm._v("\n                Complete the profile to your and click save; simple!\n            ")]) : _vm._e()]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\n                    Complete the profile to your and click save; simple!\n                ")]) : _vm._e()])], 1), _vm._v(" "), _c('div', {
     staticClass: "panel-body"
   }, [_c('div', {
     staticClass: "row metric"
@@ -32235,11 +32343,172 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [(_vm.isLoading) ? _c('spinner', {
+  return _c('div', [_c('transition', {
+    attrs: {
+      "name": "fade",
+      "mode": "out-in"
+    }
+  }, [(_vm.isLoading) ? _c('spinner', {
     attrs: {
       "message": "Loading"
     }
-  }) : _vm._e()], 1)
+  }) : _c('div', {
+    staticClass: "panel panel-headline"
+  }, [_c('div', {
+    staticClass: "panel-heading"
+  }, [_c('h3', {
+    staticClass: "panel-title"
+  }, [_vm._v("Creating a new player "), _c('i', {
+    staticClass: "fa fa-question-circle-o",
+    on: {
+      "click": function($event) {
+        _vm.listDesc = !_vm.listDesc
+      }
+    }
+  })]), _vm._v(" "), _c('transition', {
+    attrs: {
+      "name": "fade"
+    }
+  }, [(_vm.listDesc) ? _c('p', {
+    staticClass: "panel-subtitle"
+  }, [_vm._v("\n                        Complete the profile to your and click save; simple!\n                    ")]) : _vm._e()])], 1), _vm._v(" "), _c('div', {
+    staticClass: "panel-body"
+  }, [_c('div', {
+    staticClass: "row metric"
+  }, [_c('div', {
+    staticClass: "col-xs-12 col-md-6"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    staticClass: "form-label",
+    attrs: {
+      "for": "firstname"
+    }
+  }, [_vm._v("Firstname:")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.user.firstname),
+      expression: "user.firstname"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "id": "firstname"
+    },
+    domProps: {
+      "value": _vm._s(_vm.user.firstname)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.user.firstname = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-12 col-md-6"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    staticClass: "form-label",
+    attrs: {
+      "for": "surname"
+    }
+  }, [_vm._v("Surname:")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.user.surname),
+      expression: "user.surname"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "id": "surname"
+    },
+    domProps: {
+      "value": _vm._s(_vm.user.surname)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.user.surname = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-12 col-md-6"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    staticClass: "form-label",
+    attrs: {
+      "for": "email"
+    }
+  }, [_vm._v("Email address:")]), _vm._v(" "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.user.email),
+      expression: "user.email"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "id": "email"
+    },
+    domProps: {
+      "value": _vm._s(_vm.user.email)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.user.email = $event.target.value
+      }
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-12 col-md-6"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    staticClass: "form-label",
+    attrs: {
+      "for": "position"
+    }
+  }, [_vm._v("Position:")]), _vm._v(" "), _c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.user.position),
+      expression: "user.position"
+    }],
+    staticClass: "form-control",
+    attrs: {
+      "id": "position"
+    },
+    on: {
+      "change": function($event) {
+        _vm.user.position = Array.prototype.filter.call($event.target.options, function(o) {
+          return o.selected
+        }).map(function(o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val
+        })[0]
+      }
+    }
+  }, [_c('option', {
+    attrs: {
+      "value": "a"
+    }
+  }, [_vm._v("a")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-12 text-center"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('button', {
+    staticClass: "btn btn-primary",
+    on: {
+      "click": _vm.save
+    }
+  }, [_vm._v("Save")])])])])])])], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -32366,7 +32635,12 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('router-view')], 1)
+  return _c('div', [_c('transition', {
+    attrs: {
+      "name": "slideRight",
+      "mode": "out-in"
+    }
+  }, [_c('router-view')], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

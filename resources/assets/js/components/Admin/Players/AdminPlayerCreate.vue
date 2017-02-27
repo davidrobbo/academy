@@ -3,9 +3,11 @@
         <div class="panel panel-headline">
             <div class="panel-heading">
                 <h3 class="panel-title">Creating a new player <i class="fa fa-question-circle-o" @click="listDesc = !listDesc"></i></h3>
-                <p class="panel-subtitle" v-if="listDesc">
-                    Complete the profile to your and click save; simple!
-                </p>
+                <transition name="fade">
+                    <p class="panel-subtitle" v-if="listDesc">
+                        Complete the profile to your and click save; simple!
+                    </p>
+                </transition>
             </div>
             <div class="panel-body">
                 <div class="row metric">
